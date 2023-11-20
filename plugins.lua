@@ -64,9 +64,32 @@ local plugins = {
     "xeluxee/competitest.nvim",
     dependencies = "MunifTanjim/nui.nvim",
     config = function()
-      require("custom.configs.competitest")
+      require "custom.configs.competitest"
     end,
     lazy = false,
+  },
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+  },
+  {
+    "phaazon/hop.nvim",
+    branch = "v2", -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+    end,
+    lazy=false,
   },
 }
 
