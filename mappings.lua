@@ -9,9 +9,11 @@ M.general = {
     ["<leader>acre"] = { "<cmd>:CompetiTest receive testcases<CR>", "Competitest receive testcases" },
     ["<leader>ace"] = { "<cmd>:CompetiTest edit_testcase <CR>", "Competitest edit testcases" },
     ["<leader>acd"] = { "<cmd>:CompetiTest delete_testcase <CR>", "Competitest delete_testcase" },
-    
+
     ["<leader>df"] = { "<cmd>:DiffviewOpen <CR>", "open diff" },
     ["<leader>dc"] = { "<cmd>:DiffviewClose <CR>", "close diff" },
+
+    ["go"] = { "<cmd>SymbolsOutline<CR>", "outline" },
   },
 
   v = {
