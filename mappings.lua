@@ -12,6 +12,7 @@ M.general = {
 
     ["<leader>df"] = { "<cmd>:DiffviewOpen <CR>", "open diff" },
     ["<leader>dc"] = { "<cmd>:DiffviewClose <CR>", "close diff" },
+    ["<leader>cp"] = { "<cmd>:Copilot suggestion <CR>", "github copilot" },
 
     ["go"] = { "<cmd>SymbolsOutline<CR>", "outline" },
   },
