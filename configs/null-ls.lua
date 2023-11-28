@@ -13,9 +13,23 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+
+  -- go
+  b.formatting.gofmt,
+
+  b.formatting.clang_format.with {
+    extra_args = { "--style={IndentWidth: 4}" },
+  },
 }
 
 null_ls.setup {
-  debug = true,
+  debug = false,
   sources = sources,
+  on_attach = function()
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      callback = function()
+        vim.lsp.buf.format()
+      end,
+    })
+  end,
 }
