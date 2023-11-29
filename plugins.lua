@@ -121,6 +121,10 @@ local plugins = {
       require("copilot").setup {}
     end,
   },
+  {
+    "wakatime/vim-wakatime",
+        lazy=false,
+  },
 }
 
 return plugins
