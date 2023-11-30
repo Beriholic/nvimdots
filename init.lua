@@ -15,8 +15,7 @@ require "custom.run"
 
 if g.neovide then
   vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h15", {})
-  g.neovide_remember_window_size = false
-  g.neovide_no_idle = true
+  g.neovide_remember_window_size = true
   g.neovide_cursor_trail_length = 0.05
   g.neovide_cursor_antialiasing = true
   g.neovide_cursor_vfx_opacity = 200.0
@@ -26,15 +25,24 @@ if g.neovide then
   g.neovide_scroll_animation_length = 1
   g.neovide_hide_mouse_when_typing = true
   g.neovide_underline_automatic_scaling = true
-  g.neovide_confirm_quit = true
   g.neovide_fullscreen = false
   g.neovide_cursor_animation_length = 0.08
   g.neovide_cursor_trail_size = 0.72
   g.neovide_cursor_vfx_mode = "pixiedust"
   g.neovide_transparency = 0.7
+  g.neovide_refresh_rate_idle = 5
   if vim.fn.has "mac" == 1 then
-    g.neovide_transparency = 1
+    g.neovide_transparency = 0.9
     vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h16", {})
+    vim.g.neovide_input_macos_alt_is_meta = true
+    -- Helper function for transparency formatting
+    local alpha = function()
+      return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
+    end
+    -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
+    vim.g.neovide_transparency = 0
+    vim.g.transparency = 0.96
+    vim.g.neovide_background_color = "#0f1117" .. alpha()
   end
 end
 
