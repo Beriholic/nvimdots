@@ -16,7 +16,6 @@ require "custom.run"
 if g.neovide then
   vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h15", {})
   g.neovide_remember_window_size = false
-  g.neovide_refresh_rate = 165
   g.neovide_no_idle = true
   g.neovide_cursor_trail_length = 0.05
   g.neovide_cursor_antialiasing = true
@@ -33,6 +32,10 @@ if g.neovide then
   g.neovide_cursor_trail_size = 0.72
   g.neovide_cursor_vfx_mode = "pixiedust"
   g.neovide_transparency = 0.7
+  if vim.fn.has "mac" == 1 then
+    g.neovide_transparency = 1
+    vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h16", {})
+  end
 end
 
 g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snips"
