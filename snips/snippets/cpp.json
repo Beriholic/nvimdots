@@ -50,15 +50,15 @@
             "#include <bits/stdc++.h>",
             "using namespace std;",
             "",
-            "void io() {",
-            "   ios::sync_with_stdio(false);",
-            "   cin.tie(nullptr), cout.tie(nullptr);",
+            "void qwq() {",
+            "    ios::sync_with_stdio(false);",
+            "    cin.tie(nullptr), cout.tie(nullptr);",
             "}",
             "",
             "int main() {",
-            "   io();",
+            "    qwq();",
             "",
-            "   return 0;",
+            "    return 0;",
             "}"
         ]
     }

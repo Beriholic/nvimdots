@@ -25,11 +25,11 @@ local sources = {
 null_ls.setup {
   debug = false,
   sources = sources,
-  on_attach = function()
-    vim.api.nvim_create_autocmd("BufWritePost", {
-      callback = function()
-        vim.lsp.buf.format()
-      end,
-    })
-  end,
+  -- on_attach = function()
+    -- vim.api.nvim_create_autocmd("BufWritePost", {
+    --   callback = function()
+    --     vim.lsp.buf.format()
+    --   end,
+    -- })
+  -- end,
 }
