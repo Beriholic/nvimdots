@@ -15,6 +15,7 @@ require "custom.run"
 
 if g.neovide then
   vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h15", {})
+  -- vim.api.nvim_set_option_value("guifont", "monocraft:h13", {})
   g.neovide_remember_window_size = true
   g.neovide_cursor_trail_length = 0.05
   g.neovide_cursor_antialiasing = true

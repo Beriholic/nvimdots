@@ -123,7 +123,10 @@ local plugins = {
   },
   {
     "wakatime/vim-wakatime",
-        lazy=false,
+    lazy = false,
+  },
+  {
+    "luckasRanarison/tree-sitter-hypr",
   },
 }
 
