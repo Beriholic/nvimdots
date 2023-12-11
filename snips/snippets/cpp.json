@@ -1,65 +1,101 @@
 {
-    "solu": {
-        "prefix": "solu",
-        "body": [
-            "class Solution",
-            "{",
-            "public:",
-            "\t$1 $2($3) {",
-            "\t\t$4",
-            "\t}",
-            "};"
-        ],
-        "description": "leetcode class Solution template"
-    },
-    "lc": {
-        "prefix": "lc",
-        "body": [
-            "#include <bits/stdc++.h>",
-            "",
-            "using namespace std;",
-            "",
-            "class Solution",
-            "{",
-            "public:",
-            "\t$1 $2($3) {",
-            "\t\t$4",
-            "\t}",
-            "};",
-            "",
-            "int main(int argc, char *argv[]) {",
-            "\tSolution s;",
-            "\treturn 0;",
-            "}"
-        ],
-        "description": "leetcode template"
-    },
-    "hdef": {
-        "prefix": "hdef",
-        "body": [
-            "#ifndef $1",
-            "#define $1",
-            "",
-            "#endif // $1"
-        ],
-        "description": "header file definitions"
-    },
-    "toac": {
-        "prefix": "toac",
-        "body": [
-            "#include <bits/stdc++.h>",
-            "using namespace std;",
-            "",
-            "void qwq() {",
-            "    ios::sync_with_stdio(false);",
-            "    cin.tie(nullptr), cout.tie(nullptr);",
-            "}",
-            "",
-            "int main() {",
-            "    qwq();",
-            "",
-            "    return 0;",
-            "}"
-        ]
-    }
+  "solu": {
+    "prefix": "solu",
+    "body": [
+      "class Solution",
+      "{",
+      "public:",
+      "\t$1 $2($3) {",
+      "\t\t$4",
+      "\t}",
+      "};"
+    ],
+    "description": "leetcode class Solution template"
+  },
+  "lc": {
+    "prefix": "lc",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
+      "class Solution",
+      "{",
+      "public:",
+      "\t$1 $2($3) {",
+      "\t\t$4",
+      "\t}",
+      "};",
+      "",
+      "int main(int argc, char *argv[]) {",
+      "\tSolution s;",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "leetcode template"
+  },
+  "hdef": {
+    "prefix": "hdef",
+    "body": [
+      "#ifndef $1",
+      "#define $1",
+      "",
+      "#endif // $1"
+    ],
+    "description": "header file definitions"
+  },
+  "toac": {
+    "prefix": "toac",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "namespace quick_io {",
+      "struct q_instream {",
+      "    template <typename classT> inline q_instream operator>>(classT &e) const {",
+      "        e = 0;",
+      "        classT f = 1, c = 0;",
+      "        while (c < '0' || c > '9') {",
+      "            if (c == '-')",
+      "                f = -1;",
+      "            c = getchar();",
+      "        }",
+      "        while (c >= '0' && c <= '9')",
+      "            e = e * 10 + c - '0', c = getchar();",
+      "        return e = e * f, (*this);",
+      "    }",
+      "} qcin;",
+      "struct q_outstream {",
+      "    template <typename classT>",
+      "    inline q_outstream operator<<(const classT &e) const {",
+      "        if (e < 0) {",
+      "            putchar('-');",
+      "            (*this) << -e;",
+      "        } else {",
+      "            if (e > 9)",
+      "                (*this) << (e / 10);",
+      "            putchar(e % 10 + '0');",
+      "        }",
+      "        return (*this);",
+      "    }",
+      "    inline q_outstream operator<<(const char &c) const {",
+      "        return putchar(c), (*this);",
+      "    }",
+      "} qcout;",
+      "} // namespace quick_io",
+      "using namespace quick_io;",
+      "using namespace std;",
+      "#define int long long",
+      "#define endl '\\n'",
+      "",
+      "void qwq() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr), cout.tie(nullptr);",
+      "}",
+      "",
+      "signed main() {",
+      "    qwq();",
+      "",
+      "    return 0;",
+      "}"
+    ]
+  }
 }
