@@ -37,6 +37,12 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- go stuff
+    "gopls",
+
+    -- python stuff
+    "pyright",
   },
 }
 

@@ -13,13 +13,15 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+  b.formatting.clang_format.with {
+    extra_args = { "--style={IndentWidth: 4}" },
+  },
 
   -- go
   b.formatting.gofmt,
 
-  b.formatting.clang_format.with {
-    extra_args = { "--style={IndentWidth: 4}" },
-  },
+  -- python
+  b.formatting.black,
 }
 
 null_ls.setup {
