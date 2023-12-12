@@ -27,9 +27,7 @@ require('competitest').setup {
 			switch_window = { "<C-h>", "<C-l>", "<C-i>" },
 			save_and_close = "<C-s>",
 			cancel = "<C-q>",
-		},
-	},
-	runner_ui = {
+		}, }, runner_ui = {
 		interface = "split",
 		selector_show_nu = false,
 		selector_show_rnu = false,
@@ -86,14 +84,14 @@ require('competitest').setup {
 	compile_directory = ".",
 	compile_command = {
 		c = { exec = "gcc", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-		cpp = { exec = "g++", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
+		cpp = { exec = "g++", args = {"--std=c++11","-O2","-Wall", "$(FNAME)", "-o", "./output/$(FNOEXT).out" } },
 		rust = { exec = "rustc", args = { "$(FNAME)" } },
 		java = { exec = "javac", args = { "$(FNAME)" } },
 	},
 	running_directory = ".",
 	run_command = {
 		c = { exec = "./$(FNOEXT)" },
-		cpp = { exec = "./$(FNOEXT)" },
+		cpp = { exec = "./output/$(FNOEXT).out" },
 		rust = { exec = "./$(FNOEXT)" },
 		python = { exec = "python", args = { "$(FNAME)" } },
 		java = { exec = "java", args = { "$(FNOEXT)" } },
@@ -103,7 +101,7 @@ require('competitest').setup {
 	output_compare_method = "squish",
 	view_output_diff = false,
 
-	testcases_directory = ".",
+	testcases_directory = "./test_case",
 	testcases_use_single_file = false,
 	testcases_auto_detect_storage = true,
 	testcases_single_file_format = "$(FNOEXT).testcases",
