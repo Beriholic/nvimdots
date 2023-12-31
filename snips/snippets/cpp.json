@@ -158,6 +158,11 @@
       "",
       "signed main() {",
       "    qwq();",
+      "    int t=1;",
+      "    \/\/ cin>>t;",
+      "    while(t--){",
+      "    solu();",
+      "    }",
       "",
       "    return 0;",
       "}"
