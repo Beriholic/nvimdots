@@ -26,7 +26,7 @@ local function CodeRunner()
 				0,
 				"n",
 				"<F22>",
-				"<ESC>:w<CR>:split<CR>:te g++ -std=c++11 -Wshadow -Wall -o %:t:r.out %  && time ./%:t:r.out<CR>",
+				"<ESC>:w<CR>:split<CR>:te g++ -std=c++20 -Wshadow -Wall -o %:t:r.out %  && time ./%:t:r.out<CR>",
 				opt
 			)
 		end,

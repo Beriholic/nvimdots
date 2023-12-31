@@ -86,7 +86,21 @@ require("competitest").setup {
   compile_directory = ".",
   compile_command = {
     c = { exec = "gcc", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-    cpp = { exec = "g++", args = { "--std=c++11", "-O2", "-Wall", "$(FNAME)", "-o", "./output/$(FNOEXT).out" } },
+    cpp = {
+      exec = "g++",
+      args = {
+        "--std=c++20",
+        "-O2",
+        "-pipe",
+        "-Wall",
+        "-Wextra",
+        "-Wconversion",
+        "-fstack-protector",
+        "$(FNAME)",
+        "-o",
+        "./output/$(FNOEXT).out",
+      },
+    },
     rust = { exec = "rustc", args = { "$(FNAME)" } },
     java = { exec = "javac", args = { "$(FNAME)" } },
   },
@@ -114,6 +128,7 @@ require("competitest").setup {
   receive_print_message = true,
   template_file = {
     cpp = "~/.config/nvim/lua/custom/snips/snippets/ac.cpp",
+    python = "~/.config/nvim/lua/custom/snips/snippets/ac.py",
   },
   evaluate_template_modifiers = true,
   date_format = "%c",
