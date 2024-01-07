@@ -88,11 +88,7 @@ local plugins = {
         opts = {},
         -- stylua: ignore
         keys = {
-            { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
-            { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
-            { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
-            { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-            { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
         },
     },
     {
@@ -128,26 +124,6 @@ local plugins = {
     {
         "luckasRanarison/tree-sitter-hypr",
     },
-    -- install without yarn or npm
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function()
-            vim.fn["mkdp#util#install"]()
-        end,
-    },
-
-    -- install with yarn or npm
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
     {
         "kdheepak/lazygit.nvim",
         dependencies = {
@@ -177,6 +153,38 @@ local plugins = {
     {
         "stevearc/dressing.nvim",
         opts = {},
+        lazy = false,
+    },
+    {
+        "gennaro-tedesco/nvim-jqx",
+        ft = { "json", "yaml" },
+    },
+    {
+        "toppair/peek.nvim",
+        event = { "VeryLazy" },
+        build = "deno task --quiet build:fast",
+        config = function()
+            require("peek").setup {
+                theme = "light",
+            }
+            -- refer to `configuration to change defaults`
+            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+        end,
+    },
+    {
+        "michaelb/sniprun",
+        branch = "master",
+
+        build = "sh install.sh",
+        -- do 'sh install.sh 1' if you want to force compile locally
+        -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+
+        config = function()
+            require("sniprun").setup {
+                -- your options
+            }
+        end,
         lazy = false,
     },
 }
