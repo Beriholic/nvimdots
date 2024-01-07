@@ -148,6 +148,13 @@ local plugins = {
     end,
     ft = { "markdown" },
   },
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    lazy = false,
+  },
 }
 
 return plugins

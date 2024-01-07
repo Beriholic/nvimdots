@@ -18,6 +18,8 @@ M.general = {
     ["go"] = { "<cmd>SymbolsOutline<CR>", "outline" },
     ["<C-]>"] = { "<cmd>:vertical resize -5<CR>" },
     ["<C-[>"] = { "<cmd>:vertical resize +5<CR>" },
+
+    ["<leader>lz"]={"<cmd>:LazyGit<CR>"},
   },
 
   v = {
