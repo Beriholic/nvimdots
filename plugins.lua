@@ -63,7 +63,7 @@ local plugins = {
         "xeluxee/competitest.nvim",
         dependencies = "MunifTanjim/nui.nvim",
         config = function()
-            require ("custom.configs.competitest")
+            require "custom.configs.competitest"
         end,
         lazy = false,
     },
@@ -170,9 +170,14 @@ local plugins = {
             --   If not available, we use `mini` as the fallback
             "rcarriga/nvim-notify",
         },
-        config =function ()
-            require ("custom.configs.notify")
-        end
+        config = function()
+            require "custom.configs.notify"
+        end,
+    },
+    {
+        "stevearc/dressing.nvim",
+        opts = {},
+        lazy = false,
     },
 }
 

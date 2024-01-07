@@ -45,4 +45,14 @@ require("noice").setup {
             },
         },
     },
+    routes = {
+        {
+            filter = {
+                event = "msg_show",
+                kind = "",
+                find = "已写入",
+            },
+            opts = { skip = true },
+        },
+    },
 }

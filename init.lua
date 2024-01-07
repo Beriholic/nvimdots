@@ -30,7 +30,7 @@ if g.neovide then
   g.neovide_cursor_animation_length = 0.08
   g.neovide_cursor_trail_size = 0.72
   g.neovide_cursor_vfx_mode = "pixiedust"
-  g.neovide_transparency = 0.7
+  g.neovide_transparency = 0.9
   g.neovide_refresh_rate_idle = 5
   if vim.fn.has "mac" == 1 then
     vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h16", {})
