@@ -20,6 +20,7 @@ M.general = {
     ["<C-[>"] = { "<cmd>:vertical resize +5<CR>" },
 
     ["<leader>lz"]={"<cmd>:LazyGit<CR>"},
+    ["<leader>lg"]={"<cmd>:LazyGitFilter<CR>"},
   },
 
   v = {
