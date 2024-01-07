@@ -57,10 +57,7 @@ using namespace std;
 #define int long long
 #define endl '\n'
 #define NDEBUG
-void qwq() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr), cout.tie(nullptr);
-}
+
 namespace BERIHOLIC {
 #define ALL(a) a.begin(), a.end()
 #define RALL(a) a.rbegin(), a.rend()
@@ -115,7 +112,12 @@ void solu() {
 }
 
 signed main() {
-    qwq();
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr), cout.tie(nullptr);
+    // #ifndef ONLINE_JUDGE
+    //     freopen("in.txt", "r", stdin);
+    //     freopen("out.txt", "w", stdout);
+    // #endif
     int t = 1;
     // cin>>t;
     while (t--) {

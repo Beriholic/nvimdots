@@ -44,6 +44,42 @@
     ],
     "description": "header file definitions"
   },
+  "toac2": {
+    "prefix": "toac2",
+    "body": [
+      "// Created on ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "#define int long long",
+      "#define endl '\\n'",
+      "#define NDEBUG",
+      "void qwq() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr), cout.tie(nullptr);",
+      "}",
+      "",
+      "#ifndef ONLINE_JUDGE",
+      "#include \"template/debug.h\"",
+      "#else",
+      "#define _(...)",
+      "#endif",
+      "",
+      "void solu() {",
+      "",
+      "}",
+      "",
+      "signed main() {",
+      "    qwq();",
+      "    int t=1;",
+      "    \/\/ cin>>t;",
+      "    while(t--){",
+      "        solu();",
+      "    }",
+      "",
+      "    return 0;",
+      "}"
+    ]
+  },
   "toac": {
     "prefix": "toac",
     "body": [
