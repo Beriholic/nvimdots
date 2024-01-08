@@ -65,7 +65,7 @@ local plugins = {
         config = function()
             require "custom.configs.competitest"
         end,
-        lazy = false,
+        cmd = "CompetiTest",
     },
     {
         "ray-x/go.nvim",
@@ -93,7 +93,7 @@ local plugins = {
     },
     {
         "sindrets/diffview.nvim",
-        lazy = false,
+        cmd = "Diffview",
     },
 
     {
@@ -107,7 +107,7 @@ local plugins = {
         config = function()
             require("symbols-outline").setup()
         end,
-        lazy = false,
+        cmd = "SymbolsOutline",
     },
     {
         "zbirenbaum/copilot.lua",
@@ -122,14 +122,11 @@ local plugins = {
         lazy = false,
     },
     {
-        "luckasRanarison/tree-sitter-hypr",
-    },
-    {
         "kdheepak/lazygit.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
-        lazy = false,
+        cmd = "LazyGit",
     },
     -- lazy.nvim
     {
@@ -142,8 +139,7 @@ local plugins = {
             -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
             "MunifTanjim/nui.nvim",
             -- OPTIONAL:
-            --   `nvim-notify` is only needed, if you want to use the notification view.
-            --   If not available, we use `mini` as the fallback
+            --   `nvim-notify` is only needed, if you want to use the notification view. If not available, we use `mini` as the fallback
             "rcarriga/nvim-notify",
         },
         config = function()
@@ -185,7 +181,22 @@ local plugins = {
                 -- your options
             }
         end,
+        cmd = "SnipRun",
+    },
+    {
+        "h-hg/fcitx.nvim",
         lazy = false,
+        enabled = false,
+    },
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        },
+        cmd = "TodoLocList",
     },
 }
 
