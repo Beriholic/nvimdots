@@ -50,7 +50,15 @@ require("noice").setup {
             filter = {
                 event = "msg_show",
                 kind = "",
-                find = "已写入",
+                find = "写入",
+            },
+            opts = { skip = true },
+        },
+        {
+            filter = {
+                event = "msg_show",
+                kind = "",
+                find = "发生改变",
             },
             opts = { skip = true },
         },

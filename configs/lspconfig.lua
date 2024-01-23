@@ -20,7 +20,6 @@ local servers = {
     "gopls",
     "pyright",
     "thriftls",
-    "rust_analyzer",
     "marksman",
 }
 for _, lsp in ipairs(servers) do

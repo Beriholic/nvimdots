@@ -25,6 +25,12 @@ local sources = {
 
     -- bash
     b.formatting.shfmt,
+
+    -- yaml
+    b.formatting.prettier,
+
+    --rust
+    b.formatting.rustfmt,
 }
 
 null_ls.setup {
