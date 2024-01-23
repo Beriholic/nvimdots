@@ -74,6 +74,7 @@ template <typename T> T acc(const vector<T> &v) {
 }
 template <class T> void reverse(vector<T> &v) { reverse(v.begin(), v.end()); }
 template <class T> void sort(vector<T> &v) { sort(v.begin(), v.end()); }
+template <class T> void sortn(vector<T> &v,int n){sort(v.begin()+1,v.begin()+1+n);}
 template <class T> void rsort(vector<T> &v) { sort(v.rbegin(), v.rend()); }
 int qpow(int n, int k, int p) {
     int r = 1;
