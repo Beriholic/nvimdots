@@ -1,9 +1,8 @@
-![截屏](https://picss.sunbangyan.cn/2023/11/20/ea0e99e55e8f2b4cd2d40753a7c88bd9.jpeg)
+![截屏](https://www.freeimg.cn/i/2024/02/02/65bd098ce7a35.png)
 
 # Install
-
 ```bash
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Beriholic/nvimdots/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Beriholic/nvimdots/main/install.sh )"
 ```
 
 
