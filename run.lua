@@ -50,8 +50,8 @@ local function CodeRunner()
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = "rust",
 		callback = function()
-			map(0, "n", "<S-F10>", "<ESC>:w<CR>:split<CR>:te rustc % && ./%:t:r<CR>", opt)
-			map(0, "n", "<F22>", "<ESC>:w<CR>:split<CR>:te rustc % && ./%:t:r<CR>", opt)
+			map(0, "n", "<S-F10>", "<ESC>:w<CR>:split<CR>:te cargo run %<CR>", opt)
+			map(0, "n", "<F22>", "<ESC>:w<CR>:split<CR>:te cargo run %<CR>", opt)
 		end,
 	})
 end
