@@ -1,6 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 capabilities.offsetEncoding = { "utf-16" }
+local util = require "lspconfig/util"
 
 local lspconfig = require "lspconfig"
 
@@ -10,7 +11,6 @@ lspconfig.clangd.setup {
         client.resolved_capabilities.document_range_formatting = true
     end,
 }
-
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
