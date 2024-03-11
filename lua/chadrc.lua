@@ -2,8 +2,8 @@
 local M = {}
 
 M.ui = {
-    theme = "aquarium",
-    theme_toggle = { "aquarium", "aquarium" },
+    theme = "sweetpastel",
+    theme_toggle = { "sweetpastel", "sweetpastel" },
 
     hl_override = {
         NvDashAscii = {
