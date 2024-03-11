@@ -1,1 +1,1 @@
-git clone git@github.com:Beriholic/nvimdots.git ~/.config/nvim --depth1 && nvim
+git clone git@github.com:Beriholic/nvimdots.git ~/.config/nvim --depth 1 && nvim
