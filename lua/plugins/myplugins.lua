@@ -1,6 +1,6 @@
 local overrides = require("configs.overrides")
-
 ---@type NvPluginSpec[]
+
 local plugins = {
 	-- Override plugin definition options
 
@@ -45,6 +45,7 @@ local plugins = {
 	{
 		"xeluxee/competitest.nvim",
 		dependencies = "MunifTanjim/nui.nvim",
+        ft={"cpp","py"}
 		config = function()
 			require("configs.competitest")
 		end,
@@ -104,7 +105,6 @@ local plugins = {
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
-        ft={"cpp","py"}
 		config = function()
 			require("copilot").setup({
 				suggestion = {
