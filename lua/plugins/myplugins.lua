@@ -45,7 +45,7 @@ local plugins = {
 	{
 		"xeluxee/competitest.nvim",
 		dependencies = "MunifTanjim/nui.nvim",
-        ft={"cpp","py"}
+        ft={"cpp","py"},
 		config = function()
 			require("configs.competitest")
 		end,
