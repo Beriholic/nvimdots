@@ -12,7 +12,7 @@ if g.neovide then
     require "configs.neovide"
 end
 
-g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snips"
+g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/snips"
 
 for i = 1, 9, 1 do
     vim.keymap.set("n", string.format("<A-%s>", i), function()
