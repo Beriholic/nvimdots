@@ -1,4 +1,4 @@
-![截屏](https://www.freeimg.cn/i/2024/02/02/65bd098ce7a35.png)
+![截屏](https://www.freeimg.cn/i/2024/03/11/65eeb07123f10.png)
 
 # Install
 ```bash

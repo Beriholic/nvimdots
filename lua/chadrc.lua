@@ -138,10 +138,10 @@ M.ui = {
     },
 }
 
-M.plugins = "custom.plugins"
+-- M.plugins = "plugins"
 
 -- check core.mappings for table structure
-M.mappings = require "custom.mappings"
-require "custom.plugins"
+-- M.mappings = require "mappings"
+require "plugins"
 
 return M
