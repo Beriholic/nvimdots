@@ -31,6 +31,7 @@ local sources = {
 
     --rust
     b.formatting.rustfmt,
+
 }
 
 null_ls.setup {

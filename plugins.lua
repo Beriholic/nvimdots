@@ -134,7 +134,7 @@ local plugins = {
                 },
             }
         end,
-        enabled = true,
+        enabled = false,
     },
     {
         "wakatime/vim-wakatime",
