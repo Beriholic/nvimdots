@@ -8,6 +8,10 @@
       {
         "language": "cpp",
         "path": "./snippets/cpp.json"
+      },
+      {
+        "language": ["rs","rust"],
+        "path": "./snippets/rust.json"
       }
     ]
   }
