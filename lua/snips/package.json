@@ -10,7 +10,7 @@
         "path": "./snippets/cpp.json"
       },
       {
-        "language": ["rs","rust"],
+        "language": "rs",
         "path": "./snippets/rust.json"
       }
     ]
