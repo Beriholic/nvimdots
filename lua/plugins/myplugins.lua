@@ -45,7 +45,7 @@ local plugins = {
 	{
 		"xeluxee/competitest.nvim",
 		dependencies = "MunifTanjim/nui.nvim",
-        ft={"cpp","py"},
+		ft = { "cpp", "py" },
 		config = function()
 			require("configs.competitest")
 		end,
@@ -205,10 +205,10 @@ local plugins = {
 	},
 	{
 		"mrcjkb/rustaceanvim",
-		version = "^3",
+		version = "^4",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			-- "mfussenegger/nvim-dap",
+			"mfussenegger/nvim-dap",
 			{
 				"lvimuser/lsp-inlayhints.nvim",
 				opts = {},
@@ -256,24 +256,6 @@ local plugins = {
 		enabled = false,
 	},
 	{
-		"rust-lang/rust.vim",
-		ft = "rust",
-		init = function()
-			vim.g.rustfmt_autosave = 0
-		end,
-	},
-	{
-		"simrat39/rust-tools.nvim",
-		ft = "rust",
-		dependencies = "neovim/nvim-lspconfig",
-		opts = function()
-			return require("configs.rust-tools")
-		end,
-		config = function(_, opts)
-			require("rust-tools").setup(opts)
-		end,
-	},
-	{
 		"saecki/crates.nvim",
 		ft = { "rust", "toml" },
 		config = function(_, opts)
@@ -288,6 +270,13 @@ local plugins = {
 			local M = require("nvchad.configs.cmp")
 			table.insert(M.sources, { name = "crates" })
 			return M
+		end,
+	},
+	{
+		"rust-lang/rust.vim",
+		ft = "rust",
+		init = function()
+			vim.g.rustfmt_autosave = 0
 		end,
 	},
 }

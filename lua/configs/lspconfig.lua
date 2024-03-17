@@ -22,7 +22,7 @@ local servers = {
     "pyright",
     "thriftls",
     "marksman",
-    "rust_analyzer",
+    -- "rust_analyzer",
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
