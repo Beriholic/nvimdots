@@ -1,7 +1,28 @@
 #![allow(unused_imports)]
 use std::io::{stdin, stdout, BufWriter};
-type Int=i64;
+type Int = i64;
 use std::io::prelude::*;
+
+
+#[cfg(unix)]
+pub fn in_out() -> (impl BufRead, impl Write) {
+    use std::os::unix::prelude::{AsRawFd, FromRawFd};
+    unsafe {
+        let stdin = File::from_raw_fd(stdin().as_raw_fd());
+        let stdout = File::from_raw_fd(stdout().as_raw_fd());
+        (BufReader::new(stdin), BufWriter::new(stdout))
+    }
+}
+
+#[cfg(windows)]
+pub fn in_out() -> (impl BufRead, impl Write) {
+    use std::os::windows::prelude::{AsRawHandle, FromRawHandle};
+    unsafe {
+        let stdin = File::from_raw_handle(stdin().as_raw_handle());
+        let stdout = File::from_raw_handle(stdout().as_raw_handle());
+        (BufReader::new(stdin), BufWriter::new(stdout))
+    }
+}
 
 pub struct Scanner<R> {
     reader: R,
@@ -11,7 +32,11 @@ pub struct Scanner<R> {
 
 impl<R: BufRead> Scanner<R> {
     pub fn new(reader: R) -> Self {
-        Self { reader, buf_str: Vec::new(), buf_iter: "".split_ascii_whitespace() }
+        Self {
+            reader,
+            buf_str: Vec::new(),
+            buf_iter: "".split_ascii_whitespace(),
+        }
     }
     pub fn next<T: std::str::FromStr>(&mut self) -> T {
         loop {
@@ -19,7 +44,9 @@ impl<R: BufRead> Scanner<R> {
                 return token.parse().ok().expect("Failed parse");
             }
             self.buf_str.clear();
-            self.reader.read_until(b'\n', &mut self.buf_str).expect("Failed read");
+            self.reader
+                .read_until(b'\n', &mut self.buf_str)
+                .expect("Failed read");
             self.buf_iter = unsafe {
                 let slice = std::str::from_utf8_unchecked(&self.buf_str);
                 std::mem::transmute(slice.split_ascii_whitespace())
@@ -30,9 +57,7 @@ impl<R: BufRead> Scanner<R> {
 
 macro_rules! input {
     ($scanner:expr, $($r:tt)*) => {
-        input_inne
-
-r!{$scanner, $($r)*}
+        input_inner!{$scanner, $($r)*}
     };
 }
 
@@ -64,9 +89,7 @@ macro_rules! read_value {
     };
 }
 
-
 fn main() {
-    let mut scanner = Scanner::new(stdin().lock());
-    let out =&mut BufWriter::new(stdout().lock());
-
+    let mut sc = Scanner::new(stdin().lock());
+    let out = &mut BufWriter::new(stdout().lock());
 }

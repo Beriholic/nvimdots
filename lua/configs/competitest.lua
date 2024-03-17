@@ -127,8 +127,9 @@ require("competitest").setup {
   companion_port = 27121,
   receive_print_message = true,
   template_file = {
-    cpp = "~/.config/nvim/lua/custom/snips/snippets/ac.cpp",
-    python = "~/.config/nvim/lua/custom/snips/snippets/ac.py",
+    cpp = "~/.config/nvim/lua/snips/snippets/ac.cpp",
+    python = "~/.config/nvim/lua/snips/snippets/ac.py",
+    rust="~/.config/nvim/lua/snips/snippets/ac.rs",
   },
   evaluate_template_modifiers = true,
   date_format = "%c",
