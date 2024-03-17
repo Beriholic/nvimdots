@@ -12,7 +12,7 @@ map("n","<leader>ace","<cmd>:CompetiTest edit_testcase<CR>",{desc="CompetiTest e
 map("n","<leader>acd","<cmd>:CompetiTest delete_testcase",{desc="CompetiTest delete testcase"})
 
 map("n","<leader>df","<cmd>:DiffviewOpen<CR>",{desc="open file diff"})
-map("n","<leader>df","<cmd>:DiffviewClose<CR>",{desc="close file diff"})
+map("n","<leader>dc","<cmd>:DiffviewClose<CR>",{desc="close file diff"})
 map("n","<leader>cp","<cmd>:Copilot suggestion<CR>",{desc="github copilot"})
 
 map("n","go","<cmd>symbolsoutline<cr>",{desc="outline"})
