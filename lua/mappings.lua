@@ -1,9 +1,14 @@
-require("nvchad.mappings")
----@type MappingsTable
+require "nvchad.mappings"
+
+-- add yours here
 
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+--
 map("n", "<leader>acru", "<cmd>:CompetiTest run<CR>", { desc = "CompetiTest Run" })
 map("n", "<leader>acad", "<cmd>:CompetiTest add_testcase<CR>", { desc = "CompetiTest add testcase" })
 map("n","<leader>acre","<cmd>:CompetiTest receive testcases<CR>",{desc="CompetiTest receive testcase"})

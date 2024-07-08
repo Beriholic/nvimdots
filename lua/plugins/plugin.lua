@@ -36,13 +36,6 @@ local plugins = {
 		opts = overrides.nvimtree,
 	},
 	{
-		"max397574/better-escape.nvim",
-		event = "InsertEnter",
-		config = function()
-			require("better_escape").setup()
-		end,
-	},
-	{
 		"xeluxee/competitest.nvim",
 		dependencies = "MunifTanjim/nui.nvim",
 		ft = { "cpp", "py" },
@@ -94,13 +87,13 @@ local plugins = {
 			-- options
 		},
 	},
-	{
-		"simrat39/symbols-outline.nvim",
-		config = function()
-			require("symbols-outline").setup()
-		end,
-		cmd = "SymbolsOutline",
-	},
+	-- {
+	-- 	"simrat39/symbols-outline.nvim",
+	-- 	config = function()
+	-- 		require("symbols-outline").setup()
+	-- 	end,
+	-- 	cmd = "SymbolsOutline",
+	-- },
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
@@ -189,49 +182,9 @@ local plugins = {
 		enabled = false,
 	},
 	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
-		cmd = "TodoLocList",
-	},
-	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = { "mfussenegger/nvim-dap", "theHamsta/nvim-dap-virtual-text" },
 		enabled = false,
-	},
-	{
-		"mrcjkb/rustaceanvim",
-		version = "^4",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"mfussenegger/nvim-dap",
-			{
-				"lvimuser/lsp-inlayhints.nvim",
-				opts = {},
-			},
-		},
-		ft = { "rust" },
-		config = function()
-			vim.g.rustaceanvim = {
-				inlay_hints = {
-					highlight = "NonText",
-				},
-				tools = {
-					hover_actions = {
-						auto_focus = true,
-					},
-				},
-				server = {
-					on_attach = function(client, bufnr)
-						require("lsp-inlayhints").on_attach(client, bufnr)
-					end,
-				},
-			}
-		end,
 	},
 	{
 		"okuuva/auto-save.nvim",
@@ -270,13 +223,6 @@ local plugins = {
 			local M = require("nvchad.configs.cmp")
 			table.insert(M.sources, { name = "crates" })
 			return M
-		end,
-	},
-	{
-		"rust-lang/rust.vim",
-		ft = "rust",
-		init = function()
-			vim.g.rustfmt_autosave = 0
 		end,
 	},
 }
