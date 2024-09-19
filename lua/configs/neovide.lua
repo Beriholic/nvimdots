@@ -17,6 +17,15 @@ g.neovide_cursor_trail_size = 0.72
 g.neovide_cursor_vfx_mode = "pixiedust"
 g.neovide_transparency = 0.9
 g.neovide_refresh_rate_idle = 5
+g.neovide_fullscreen = true
+-- show fps
+g.neovide_profiler = false
+
+g.neovide_cursor_vfx_mode = "pixiedust"
+g.neovide_cursor_vfx_mode = "wireframe"
+
+
+
 if vim.fn.has "mac" == 1 then
     vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h16", {})
     g.neovide_input_macos_alt_is_meta = true

@@ -1,40 +1,4 @@
-local overrides = require "configs.overrides"
----@type NvPluginSpec[]
-
-local plugins = {
-  -- Override plugin definition options
-
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "configs.null-ls"
-        end,
-      },
-    },
-    config = function()
-      require "nvchad.configs.lspconfig"
-      require "configs.lspconfig"
-    end, -- Override to setup mason-lspconfig
-    opts = {
-      inlay_hints = { enabled = true },
-    },
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
+local plugins={
   {
     "xeluxee/competitest.nvim",
     dependencies = "MunifTanjim/nui.nvim",
@@ -66,16 +30,6 @@ local plugins = {
         }),
       }
     end,
-  },
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    ---@type Flash.Config
-    opts = {},
-        -- stylua: ignore
-        keys = {
-            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-        },
   },
   {
     "sindrets/diffview.nvim",
@@ -199,31 +153,14 @@ local plugins = {
         execution_message = {
           enabled = false,
           message = function() -- message to print on save
-            return ("")
+            return ""
           end,
           dim = 0.18, -- dim the color of `message`
           cleaning_interval = 1250, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
         },
       }
     end,
-    enabled = true,
-  },
-  {
-    "saecki/crates.nvim",
-    ft = { "rust", "toml" },
-    config = function(_, opts)
-      local crates = require "crates"
-      crates.setup(opts)
-      crates.show()
-    end,
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function()
-      local M = require "nvchad.configs.cmp"
-      table.insert(M.sources, { name = "crates" })
-      return M
-    end,
+    enabled = true
   },
   {
     "windwp/nvim-autopairs",
@@ -232,12 +169,7 @@ local plugins = {
     lazy = false,
     -- use opts = {} for passing setup options
     -- this is equalent to setup({}) function
-  },
-  {
-    "mrcjkb/rustaceanvim",
-    version = "^4", -- Recommended
-    ft = { "rust", "rs" },
-  },
+  }
 }
 
 return plugins
