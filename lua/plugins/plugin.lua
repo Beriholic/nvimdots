@@ -1,4 +1,4 @@
-local plugins={
+local plugins = {
   {
     "xeluxee/competitest.nvim",
     dependencies = "MunifTanjim/nui.nvim",
@@ -101,18 +101,13 @@ local plugins={
     ft = { "json", "yaml" },
   },
   {
-    "toppair/peek.nvim",
-    -- event = { "VeryLazy" },
-    ft = { "md", "markdown" },
-    build = "deno task --quiet build:fast",
-    config = function()
-      require("peek").setup {
-        theme = "light",
-      }
-      -- refer to `configuration to change defaults`
-      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
     end,
+    ft = { "markdown" },
   },
   {
     "michaelb/sniprun",
@@ -160,7 +155,7 @@ local plugins={
         },
       }
     end,
-    enabled = true
+    enabled = true,
   },
   {
     "windwp/nvim-autopairs",
@@ -169,7 +164,7 @@ local plugins={
     lazy = false,
     -- use opts = {} for passing setup options
     -- this is equalent to setup({}) function
-  }
+  },
 }
 
 return plugins
