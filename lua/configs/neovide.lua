@@ -28,7 +28,7 @@ g.neovide_cursor_vfx_mode = "wireframe"
 
 if vim.fn.has "mac" == 1 then
     vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h16", {})
-    g.neovide_input_macos_alt_is_meta = true
+    g.neovide_input_macos_option_key_is_Meata=true
     -- Helper function for transparency formatting
     local alpha = function()
         return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
