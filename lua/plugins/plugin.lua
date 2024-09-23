@@ -165,6 +165,14 @@ local plugins = {
     -- use opts = {} for passing setup options
     -- this is equalent to setup({}) function
   },
+
+  -- rust
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false, -- This plugin is already lazy
+    ft = { "rs", "rust" },
+  },
 }
 
 return plugins
