@@ -9,8 +9,10 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 --
-map("n","<leader>df","<cmd>:DiffviewOpen<CR>",{desc="open file diff"})
-map("n","<leader>dc","<cmd>:DiffviewClose<CR>",{desc="close file diff"})
-
-map("n","<leader>lz","<cmd>:LazyGit<CR>",{desc="open lazygit"})
-map("n","<leader>lg","<cmd>:LazyGitFilter",{desc="lazy git filter"})
+map("n", "<leader>df", "<cmd>:DiffviewOpen<CR>", { desc = "open file diff" })
+map("n", "<leader>dc", "<cmd>:DiffviewClose<CR>", { desc = "close file diff" })
+map("n", "<leader>z", "<cmd>lua Snacks.zen()<cr>", { desc = "Toggle Zen Mode" })
+map("n", "<leader>n", "<cmd>lua Snacks.notifier.show_history()<cr>", { desc = "Notification History" })
+map("n", "<leader>gf", "<cmd>lua Snacks.lazygit.log_file()<cr>", { desc = "Lazygit Current File History" })
+map("n", "<leader>un", "<cmd>lua Snacks.notifier.hide()<cr>", { desc = "Dismiss All Notifications" })
+map("n", "<leader>gg", "<cmd>lua Snacks.lazygit()<cr>", { desc = "Lazygit" })
