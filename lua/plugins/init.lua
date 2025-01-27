@@ -47,13 +47,6 @@ return {
     },
     cmd = "LazyGit",
   },
-
-  {
-    "stevearc/dressing.nvim",
-    opts = {},
-    lazy = false,
-  },
-
   { -- Breadcrumbs
     "Bekaboo/dropbar.nvim",
     lazy = false,
@@ -79,12 +72,6 @@ return {
         end
       end
     end,
-  },
-  {
-    "catgoose/nvim-colorizer.lua",
-    event = "BufReadPre",
-    opts = { -- set to setup table
-    },
   },
   {
     "folke/noice.nvim",
@@ -145,5 +132,49 @@ return {
       statuscolumn = { enabled = true },
       words = { enabled = true },
     },
+  },
+  {
+    "stevearc/aerial.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    cmd = "AerialToggle",
+  },
+  {
+    "kevinhwang91/nvim-bqf",
+    ft = "qf",
+  },
+  {
+    "michaelb/sniprun",
+    branch = "master",
+
+    build = "sh install.sh",
+    -- do 'sh install.sh 1' if you want to force compile locally
+    -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+
+    config = function()
+      require("sniprun").setup {
+        -- your options
+      }
+    end,
+    cmd = "SnipRun",
+  },
+  {
+    "nvzone/timerly",
+    cmd = "TimerlyToggle",
+    config = {
+      position = "top-right",
+    },
+  },
+  {
+    "nvzone/volt",
+    lazy = true,
+  },
+  {
+    "nvzone/menu",
+    lazy = true,
   },
 }

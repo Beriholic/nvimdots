@@ -15,4 +15,20 @@ map("n", "<leader>z", "<cmd>lua Snacks.zen()<cr>", { desc = "Toggle Zen Mode" })
 map("n", "<leader>n", "<cmd>lua Snacks.notifier.show_history()<cr>", { desc = "Notification History" })
 map("n", "<leader>gf", "<cmd>lua Snacks.lazygit.log_file()<cr>", { desc = "Lazygit Current File History" })
 map("n", "<leader>un", "<cmd>lua Snacks.notifier.hide()<cr>", { desc = "Dismiss All Notifications" })
-map("n", "<leader>gg", "<cmd>lua Snacks.lazygit()<cr>", { desc = "Lazygit" })
+map("n", "<leader>lz", "<cmd>lua Snacks.lazygit()<cr>", { desc = "Lazygit" })
+map("n", "<leader>go", "<cmd>AerialToggle!<CR>", { desc = "Toggle code outline window" })
+
+map("n", "<leader>t", function()
+  require("menu").open "default"
+end, {})
+map({ "n", "v" }, "<RightMouse>", function()
+  require("menu.utils").delete_old_menus()
+
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+
+  -- clicked buf
+  local buf = vim.api.nvim_win_get_buf(vim.fn.getmousepos().winid)
+  local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
+
+  require("menu").open(options, { mouse = true })
+end, {})

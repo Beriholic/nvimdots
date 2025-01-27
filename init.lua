@@ -40,3 +40,5 @@ for i = 1, 9, 1 do
     vim.api.nvim_set_current_buf(vim.t.bufs[i])
   end)
 end
+
+require "configs.neovide"
