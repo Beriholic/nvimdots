@@ -13,10 +13,10 @@ local options = {
   ui = {
     cmp = {
       icons_left = false, -- only for non-atom styles!
-      style = "default",  -- default/flat_light/flat_dark/atom/atom_colored
+      style = "default", -- default/flat_light/flat_dark/atom/atom_colored
       abbr_maxwidth = 60,
       format_colors = {
-        tailwind = false, -- will work for css lsp too
+        tailwind = true, -- will work for css lsp too
         icon = "󱓻",
       },
     },
@@ -117,7 +117,7 @@ local options = {
   lsp = { signature = true },
 
   cheatsheet = {
-    theme = "grid",                                                     -- simple/grid
+    theme = "grid", -- simple/grid
     excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
   },
 
