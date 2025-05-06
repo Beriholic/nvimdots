@@ -15,9 +15,9 @@ g.neovide_fullscreen = false
 g.neovide_cursor_animation_length = 0.08
 g.neovide_cursor_trail_size = 0.72
 g.neovide_cursor_vfx_mode = "pixiedust"
-g.neovide_transparency = 0.8
+g.neovide_opacity = 0.8
 g.neovide_refresh_rate_idle = 5
-g.neovide_fullscreen = true
+g.neovide_fullscreen = false
 -- show fps
 g.neovide_profiler = false
 

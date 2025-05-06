@@ -49,6 +49,7 @@ return {
   },
   { -- Breadcrumbs
     "Bekaboo/dropbar.nvim",
+    enabled = false,
     lazy = false,
     -- Optional, but required for fuzzy finder support
     dependencies = {
