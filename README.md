@@ -2,7 +2,8 @@
 
 # Install
 ```bash
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Beriholic/nvimdots/main/install.sh )"
+mv ~/.config/nvim ~/.config/nvim_bk
+git clone https://github.com/Beriholic/nvimdots.git ~/.config/nvim && nvim --depth=1
 ```
 
 
