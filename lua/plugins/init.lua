@@ -42,15 +42,6 @@ return {
     },
     cmd = "LazyGit",
   },
-  { -- Breadcrumbs
-    "Bekaboo/dropbar.nvim",
-    enabled = false,
-    lazy = false,
-    -- Optional, but required for fuzzy finder support
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-    },
-  },
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
     event = "BufRead",
@@ -144,39 +135,7 @@ return {
     ft = "qf",
   },
   {
-    "michaelb/sniprun",
-    branch = "master",
-
-    build = "sh install.sh",
-    -- do 'sh install.sh 1' if you want to force compile locally
-    -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
-
-    config = function()
-      require("sniprun").setup {
-        -- your options
-      }
-    end,
-    cmd = "SnipRun",
-  },
-  {
-    "nvzone/timerly",
-    cmd = "TimerlyToggle",
-    config = {
-      position = "top-right",
-    },
-  },
-  {
     "nvzone/volt",
     lazy = true,
-  },
-  {
-    "nvzone/menu",
-    lazy = true,
-  },
-  {
-    "chomosuke/typst-preview.nvim",
-    ft = "typst",
-    version = "1.*",
-    opts = {}, -- lazy.nvim will implicitly calls `setup {}`
   },
 }
