@@ -3,7 +3,7 @@
 # Install
 ```bash
 mv ~/.config/nvim ~/.config/nvim_bk
-git clone https://github.com/Beriholic/nvimdots.git ~/.config/nvim && nvim --depth=1
+git clone https://github.com/Beriholic/nvimdots.git ~/.config/nvim  --depth=1 && nvim
 ```
 
 
