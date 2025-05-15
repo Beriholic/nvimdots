@@ -4,24 +4,19 @@ return {
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
-
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     lazy = false,
   },
   {
-    "williamboman/mason.nvim",
-    lazy = false,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     lazy = false,
     opts = function()
       return require "configs.lspconfig"
     end,
   },
-
+  { import = "nvchad.blink.lazyspec" },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
