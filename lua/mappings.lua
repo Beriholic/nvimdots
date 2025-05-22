@@ -16,7 +16,10 @@ map("n", "<leader>n", "<cmd>lua Snacks.notifier.show_history()<cr>", { desc = "N
 map("n", "<leader>gf", "<cmd>lua Snacks.lazygit.log_file()<cr>", { desc = "Lazygit Current File History" })
 map("n", "<leader>un", "<cmd>lua Snacks.notifier.hide()<cr>", { desc = "Dismiss All Notifications" })
 map("n", "<leader>lz", "<cmd>lua Snacks.lazygit()<cr>", { desc = "Lazygit" })
-map("n", "<leader>go", "<cmd>AerialToggle!<CR>", { desc = "Toggle code outline window" })
+map("n", "<leader>go", "<cmd>AerialToggle!<cr>", { desc = "Toggle code outline window" })
+map("n", "<leader>tp", "<cmd>lua Snacks.scratch()<cr>", { desc = "Toggle Scratch Buffer" })
+map("n", "<leader>.", "<cmd>lua Snacks.scratch.select() <cr>", { desc = "Select Scratch Buffer" })
+map("n", "<leader>qf", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
 
 map("n", "<leader>t", function()
   require("menu").open "default"
