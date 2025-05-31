@@ -20,6 +20,18 @@ map("n", "<leader>go", "<cmd>AerialToggle!<cr>", { desc = "Toggle code outline w
 map("n", "<leader>tp", "<cmd>lua Snacks.scratch()<cr>", { desc = "Toggle Scratch Buffer" })
 map("n", "<leader>.", "<cmd>lua Snacks.scratch.select() <cr>", { desc = "Select Scratch Buffer" })
 map("n", "<leader>qf", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
+map("n", "<leader>ca", "<cmd>lua require('tiny-code-action').code_action()<cr>", { desc = "LSP CodeAction" })
+
+-- vim.keymap.set("n", "<leader>ca", function()
+-- 	require("tiny-code-action").code_action()
+-- end, { noremap = true, silent = true })
+--
+
+-- map("n", "gd", "<cmd>lua snacks.picker.lsp_definitions() <cr>", { desc = "Goto Definition" })
+-- map("n", "gD", "<cmd>lua snacks.picker.lsp_declarations() <cr>", { desc = "Goto Declaration" })
+-- map("n", "gr", "<cmd>lua snacks.picker.lsp_references() <cr>", { nowait = true, desc = "References" })
+-- map("n", "gI", "<cmd>lua snacks.picker.lsp_implementations() <cr>", { desc = "Goto Implementation" })
+-- map("n", "gy", "<cmd>lua snacks.picker.lsp_type_definitions() <cr>", { desc = "Goto T[y]pe Definition" })
 
 map("n", "<leader>t", function()
   require("menu").open "default"

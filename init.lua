@@ -42,3 +42,4 @@ for i = 1, 9, 1 do
 end
 
 require "configs.neovide"
+require "configs.windsurf"
