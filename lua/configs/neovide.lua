@@ -1,5 +1,5 @@
 local g = vim.g
-vim.api.nvim_set_option_value("guifont", "agave nerd font mono:h14", {})
+vim.api.nvim_set_option_value("guifont", "Maple Mono NF CN:h12", {})
 -- vim.api.nvim_set_option_value("guifont", "monocraft:h13", {})
 g.neovide_remember_window_size = true
 g.neovide_cursor_trail_length = 0.05
@@ -20,6 +20,3 @@ g.neovide_refresh_rate_idle = 5
 g.neovide_fullscreen = false
 -- show fps
 g.neovide_profiler = false
-
-g.neovide_cursor_vfx_mode = "pixiedust"
-g.neovide_cursor_vfx_mode = "wireframe"

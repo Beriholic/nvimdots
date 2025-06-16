@@ -1,4 +1,5 @@
-![](https://img.beriholic.xyz/2025-05-15-130020_hyprshot.png)
+![](https://img.beriholic.xyz/2025-06-16-170704_hyprshot.png)
+
 
 # Install
 ```bash
