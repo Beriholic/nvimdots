@@ -9,31 +9,19 @@ return {
   ---@type avante.Config
   opts = {
     instructions_file = "avante.md",
-    provider = "deepseek",
+    provider = "modelspace",
     providers = {
-      deepseek = {
+      openrouter = {
         __inherited_from = "openai",
         endpoint = "https://openrouter.ai/api/v1",
         api_key_name = "OPENROUTER_API_KEY",
         model = "deepseek/deepseek-chat-v3.1:free",
       },
-      kimi = {
+      modelspace = {
         __inherited_from = "openai",
-        endpoint = "https://openrouter.ai/api/v1",
-        api_key_name = "OPENROUTER_API_KEY",
-        model = "moonshotai/kimi-k2",
-      },
-      qwen = {
-        __inherited_from = "openai",
-        endpoint = "https://openrouter.ai/api/v1",
-        api_key_name = "OPENROUTER_API_KEY",
-        model = "qwen/qwen3-coder:free",
-      },
-      gork = {
-        __inherited_from = "openai",
-        endpoint = "https://openrouter.ai/api/v1",
-        api_key_name = "OPENROUTER_API_KEY",
-        model = "x-ai/grok-4-fast:free",
+        endpoint = "https://api-inference.modelscope.cn/v1",
+        api_key_name = "MODELSCOPE_ACCESS_TOKEN",
+        model = "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       },
     },
   },
