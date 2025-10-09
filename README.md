@@ -1,4 +1,4 @@
-![](https://img.beriholic.xyz/2025-10-02%2010.09.22.webp)
+![](https://img.beriholic.cv/2025-10-02%2010.09.22.webp)
 
 
 # Install
