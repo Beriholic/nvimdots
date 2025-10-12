@@ -5,8 +5,8 @@ vim_map("i", "jk", "<ESC>", { silent = true })
 -- open file
 
 -- buffers
-map("n", "<tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "<S-tab>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- git
 map("n", "<leader>g", function()
