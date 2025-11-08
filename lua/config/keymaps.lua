@@ -17,4 +17,9 @@ map("n", "<leader>df", "<cmd>:DiffviewOpen<CR>", { desc = "open file diff" })
 map("n", "<leader>dF", "<cmd>:DiffviewClose<CR>", { desc = "close file diff" })
 
 -- telescope
-map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
+map(
+  "n",
+  "<leader>fw",
+  ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+  { desc = "telescope live grep" }
+)
